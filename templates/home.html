@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Medical Insurance Cost Prediction App</title>
+	
+	<style> * {font-size:16px;} </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+	<!--
+	<style>
+		body{
+            background-image: linear-gradient(rgba(255, 253, 253, 0.247), rgba(255, 250, 250, 0.253)), url('https://cached-api.voxmarkets.co.uk/img/resize?nocrop=true&type=webp&width=1024&url=https://s3-eu-west-1.amazonaws.com/vox.store.images/cms/64524a4e-1bb2-492c-bcc2-7bdd09af76b4.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 100vh;
+		}
+	</style>
+	-->
+	
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Medical Insurance Cost Prediction Web App</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" style="margin-left: 400px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/info">About Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/feedback">Feedback</a>
+			</li>
+                        
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+	<center>
+		<h1>Fill in the details</h1>
+		
+		
+<div class="contain" style="margin-top:10px;">
+	<div class="col-lg-7 shadow mx-auto p-4 mt-5" style="background-color: rgb(245, 190, 9); border-radius: 8px;">
+		<form action="/check" method="POST">
+		<input class="form-control" type="number" name="age" placeholder=" Enter The Age " required>
+		<br>
+	
+	<h2> Your Sex  </h2>
+		<input class="form-check-input" type="radio" name="sex" value="male" required> Male </input>
+		<input  class="form-check-input" type="radio" name="sex" value="female" required> Female </input>
+		<br><br>
+	
+	
+		<input class="form-control" type="number" step = 0.01 name="bmi" placeholder=" Enter The BMI(Body Mass Index) " required>
+		<br>
+		<a href="/bmi" style="font-family:Algerian;">Calculate BMI</a>
+		<br><br>
+		<input class="form-control" type="number" name="children" placeholder=" Enter The No. Of Children You Have " required>
+		<br>
+	
+		<h2> Are You A Smoker  </h2>
+		<input class="form-check-input" type="radio" name="smoker" value="yes" required> Yes</input>
+		<input class="form-check-input" type="radio" name="smoker" value="no" required> No </input>
+		<br><br>
+	
+	
+		<input type="submit" value=" Check Charges "  class="btn btn-primary">
+		</form>
+		
+		<br>
+		<div class="col-lg-9 shadow " style="background-color: rgb(248, 248, 247); border-radius: 8px;">
+			<p style="color: rgb(0, 0, 0); font-size:30px">{{ msg }}</p>
+			</div>
+	</center>
+</div>
+	</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!--
+<form>
+	background-image: linear-gradient(rgba(255, 253, 253, 0.247), rgba(255, 250, 250, 0.253)), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.voxmarkets.co.uk%2Farticles%2Ffive-companies-transforming-healthcare-with-ai-352d230%2F&psig=AOvVaw3ibQuPmlFyEteKEZsAxIbr&ust=1683114884454000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCNjkgtrJ1v4CFQAAAAAdAAAAABAX');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 100vh;
+		<button class="btn btn-info  btn-outline-success" type="button" style="margin:20px; background-color:info;"><a style="text-decoration:none; padding:20px; color:black;"
+			href="/bmi">Calculate BMI</a></button>
+	<fieldset disabled>
+	  <legend>Disabled fieldset example</legend>
+	  <div class="mb-3">
+		<label for="disabledTextInput" class="form-label">Disabled input</label>
+		<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+	  </div>
+	  <div class="mb-3">
+		<label for="disabledSelect" class="form-label">Disabled select menu</label>
+		<select id="disabledSelect" class="form-select">
+		  <option>Disabled select</option>
+		</select>
+	  </div>
+	  <div class="mb-3">
+		<div class="form-check">
+		  <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+		  <label class="form-check-label" for="disabledFieldsetCheck">
+			Can't check this
+		  </label>
+		</div>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</fieldset>
+  </form>
+  --> 
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+</head>
+<body>
+</body>
